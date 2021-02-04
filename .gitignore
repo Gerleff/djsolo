@@ -1,0 +1,8 @@
+*.db
+.idea/.gitignore
+.idea/dbnavigator.xml
+.idea/djsolo.iml
+.idea/inspectionProfiles/
+.idea/misc.xml
+.idea/modules.xml
+
