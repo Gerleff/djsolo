@@ -5,6 +5,7 @@ from django.db import models
 
 class Films(models.Model):
     names = models.CharField('Название', max_length=220)
+    ugly_name = models.CharField('Название для поиска', max_length=220)
     links = models.URLField("Ссылка", max_length=220)
     kp_rate = models.FloatField("КП рейтинг")
     kp_links = models.URLField("КП ссылка", max_length=220)
