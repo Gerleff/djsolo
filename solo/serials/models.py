@@ -13,3 +13,5 @@ class Serials(models.Model):
     imdb_links = models.URLField("ИМДБ ссылка", max_length=220)
     included = models.BooleanField("Включен в выдачу", default=True)
 
+    class Meta:
+        db_table = 'serials_serials'

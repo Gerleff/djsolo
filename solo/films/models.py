@@ -13,6 +13,7 @@ class Films(models.Model):
     imdb_links = models.URLField("ИМДБ ссылка", max_length=220)
     included = models.BooleanField("Включен в выдачу", default=True)
 
-
+    class Meta:
+        db_table = 'films_films'
 # class UglyNames(models.Model):
 #     names = models.ForeignKey()

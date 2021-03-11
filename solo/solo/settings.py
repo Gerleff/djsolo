@@ -25,7 +25,7 @@ SECRET_KEY = '0zyml5wtqa2%7pnlt$6j^&yqxg3jd-kb6ylzsbutq2=qlfnlj6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', '82.148.29.58']
 
 
 # Application definition
@@ -77,15 +77,15 @@ WSGI_APPLICATION = 'solo.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': '/home/root/code/filmy7bot/database.db',
+        'NAME': '/root/code/filmy7bot/database1.db',
     }
 }
 """DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postgres',
-        'USER': 'user_manager',
-        'PASSWORD': 'cocacola77',
+        'NAME': 'bot_db',
+        'USER': 'postgres',
+        'PASSWORD': 'postgrawr88D',
         'HOST': 'localhost',
         'PORT': '5432',
     }
