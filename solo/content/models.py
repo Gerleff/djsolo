@@ -7,10 +7,10 @@ class Film(models.Model):
     names = models.CharField('Название', max_length=220)
     ugly_name = models.CharField('Название для поиска', max_length=220)
     links = models.URLField("Ссылка", max_length=220)
-    kp_rate = models.FloatField("КП рейтинг")
-    kp_links = models.URLField("КП ссылка", max_length=220)
-    imdb_rate = models.FloatField("ИМДБ рейтинг")
-    imdb_links = models.URLField("ИМДБ ссылка", max_length=220)
+    kp_rate = models.FloatField("КП рейтинг", null=True)
+    kp_links = models.URLField("КП ссылка", max_length=220, null=True)
+    imdb_rate = models.FloatField("ИМДБ рейтинг", null=True)
+    imdb_links = models.URLField("ИМДБ ссылка", max_length=220, null=True)
     included = models.BooleanField("Включен в выдачу", default=True)
 
     class Meta:
@@ -21,10 +21,10 @@ class Serial(models.Model):
     names = models.CharField('Название', max_length=220)
     ugly_name = models.CharField('Название для поиска', max_length=220)
     links = models.URLField("Ссылка", max_length=220)
-    kp_rate = models.FloatField("КП рейтинг")
-    kp_links = models.URLField("КП ссылка", max_length=220)
-    imdb_rate = models.FloatField("ИМДБ рейтинг")
-    imdb_links = models.URLField("ИМДБ ссылка", max_length=220)
+    kp_rate = models.FloatField("КП рейтинг", null=True)
+    kp_links = models.URLField("КП ссылка", max_length=220, null=True)
+    imdb_rate = models.FloatField("ИМДБ рейтинг", null=True)
+    imdb_links = models.URLField("ИМДБ ссылка", max_length=220, null=True)
     included = models.BooleanField("Включен в выдачу", default=True)
 
     class Meta:
