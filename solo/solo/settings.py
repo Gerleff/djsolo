@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'films', 'serials', 'tosub', 'users'
+    'content', 'tosub', 'users'
 ]
 
 MIDDLEWARE = [
@@ -74,13 +74,13 @@ WSGI_APPLICATION = 'solo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': '/root/code/filmy7bot/database1.db',
+#     }
+# }
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': '/root/code/filmy7bot/database1.db',
-    }
-}
-"""DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'bot_db',
@@ -89,7 +89,7 @@ DATABASES = {
         'HOST': 'localhost',
         'PORT': '5432',
     }
-}"""
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
