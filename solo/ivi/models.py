@@ -19,6 +19,9 @@ class Ivi(models.Model):
     genres = ArrayField(models.IntegerField(blank=True, null=True))
     categories = ArrayField(models.IntegerField(blank=True, null=True))
 
+    def __str__(self):
+        return self.name
+
     class Meta:
         abstract = True
 
