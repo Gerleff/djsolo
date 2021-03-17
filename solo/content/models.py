@@ -12,6 +12,8 @@ class Film(models.Model):
     imdb_rate = models.CharField("ИМДБ рейтинг", null=True, max_length=50)
     imdb_links = models.URLField("ИМДБ ссылка", max_length=220, null=True)
     included = models.BooleanField("Включен в выдачу", default=True)
+    ivi_link = models.URLField("Ссылка IVI", max_length=220, null=True)
+    ivi_description = models.TextField('Описание от IVI', null=True)
 
     class Meta:
         db_table = 'film'
@@ -26,6 +28,8 @@ class Serial(models.Model):
     imdb_rate = models.CharField("ИМДБ рейтинг", null=True, max_length=50)
     imdb_links = models.URLField("ИМДБ ссылка", max_length=220, null=True)
     included = models.BooleanField("Включен в выдачу", default=True)
+    ivi_link = models.URLField("Ссылка IVI", max_length=220, null=True)
+    ivi_description = models.TextField('Описание от IVI', null=True)
 
     class Meta:
         db_table = 'serial'
