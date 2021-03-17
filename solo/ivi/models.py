@@ -14,7 +14,7 @@ class Ivi(models.Model):
     ivi_rate = models.FloatField()
     kp_rate = models.CharField(max_length=10)
     imdb_rate = models.CharField(max_length=10)
-    ivi_id = models.IntegerField()
+    ivi_id = models.IntegerField(unique=True)
     kp_id = models.IntegerField()
     genres = ArrayField(models.IntegerField(blank=True, null=True))
     categories = ArrayField(models.IntegerField(blank=True, null=True))
