@@ -1,7 +1,7 @@
 from django.contrib import admin
 
 # Register your models here.
-from solo.ivi.models import Film, Serial
+from .models import Film, Serial
 
 
 @admin.register(Film)
