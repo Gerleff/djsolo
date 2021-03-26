@@ -3,7 +3,7 @@ from django.db import models
 
 class User(models.Model):
     name = models.CharField('Логин', max_length=220, null=True)
-    user_id = models.IntegerField('Телеграм айди')
+    user_id = models.IntegerField('Телеграм айди', unique=True)
 
     def __str__(self):
         return f'{self.user_id} ({self.name})'
@@ -25,7 +25,7 @@ class Mailing(models.Model):
 
 
 class MailMessage(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Пользователь')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Пользователь', to_field='user_id')
     mailing = models.ForeignKey(Mailing, on_delete=models.CASCADE, verbose_name='Рассылка')
     message_id = models.IntegerField()
 
