@@ -3,7 +3,7 @@ from django.db import models
 
 class User(models.Model):
     name = models.CharField('Логин', max_length=220, null=True)
-    user_id = models.IntegerField('Телеграм айди', unique=True)
+    user_id = models.IntegerField('Телеграм айди', unique=True, primary_key=True)
 
     def __str__(self):
         return f'{self.user_id} ({self.name})'
