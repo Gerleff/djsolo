@@ -25,7 +25,7 @@ class Mailing(models.Model):
 
 
 class MailMessage(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Пользователь', to_field='user_id')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Пользователь')
     mailing = models.ForeignKey(Mailing, on_delete=models.CASCADE, verbose_name='Рассылка')
     message_id = models.IntegerField()
 
