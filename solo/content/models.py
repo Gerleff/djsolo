@@ -33,3 +33,11 @@ class Serial(models.Model):
 
     class Meta:
         db_table = 'serial'
+
+
+class Promo(models.Model):
+    photo = models.CharField('Ссылка или file_id', max_length=220)
+    text = models.TextField()
+
+    class Meta:
+        db_table = 'promo'
