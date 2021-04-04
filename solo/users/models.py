@@ -20,6 +20,8 @@ class Mailing(models.Model):
     content = models.TextField('Контент', null=True, editable=False)
     created_at = models.DateTimeField(auto_now_add=True, editable=False)
     users = models.ManyToManyField(User, through='MailMessage')
+    delivered = models.IntegerField(default=0)
+    undelivered = models.IntegerField(default=0)
 
     def __str__(self):
         return f' от {self.created_at}'
