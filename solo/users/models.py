@@ -17,16 +17,19 @@ class User(models.Model):
 
 class Mailing(models.Model):
     """Mailing model"""
-    content = models.TextField('Контент', null=True, editable=False)
+    initiator = models.IntegerField(null=True)
+    text = models.TextField(null=True, blank=True)
+    photo = models.JSONField(null=True, blank=True)
+    video = models.JSONField(null=True, blank=True)
+    caption = models.TextField(null=True, blank=True)
+    poll = models.JSONField(null=True, blank=True)
+    reply_markup = models.JSONField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True, editable=False)
     users = models.ManyToManyField(User, through='MailMessage', editable=False)
     delivered = models.IntegerField(default=0, editable=False)
     undelivered = models.IntegerField(default=0, editable=False)
     last_user_id = models.IntegerField(null=True, blank=True, editable=False)
     done = models.BooleanField(default=False)
-
-    def __str__(self):
-        return f' от {self.created_at}'
 
     class Meta:
         """Meta-data"""
