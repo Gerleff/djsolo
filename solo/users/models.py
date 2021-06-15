@@ -20,6 +20,7 @@ class Mailing(models.Model):
     initiator = models.IntegerField(null=True)
     text = models.TextField(null=True, blank=True)
     photo = models.JSONField(null=True, blank=True)
+    animation = models.JSONField(null=True, blank=True)
     video = models.JSONField(null=True, blank=True)
     caption = models.TextField(null=True, blank=True)
     poll = models.JSONField(null=True, blank=True)
